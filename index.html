@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Words | Specialist Speech & Language Therapy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #fdfbf7;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Fraunces', serif;
+        }
+        
+        /* Custom styles for specific design elements that are hard to achieve purely with Tailwind utilities */
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 2px #1a1a1a;
+        }
+        
+        .arch-mask {
+            border-radius: 999px 999px 0 0;
+        }
+        
+        .blob-mask {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+
+        /* Hide scrollbar for clean masonry look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdfbf7; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased text-lg">
+
+    <!-- Navigation -->
+    <nav class="w-full flex justify-between items-center py-6 px-6 md:px-12 relative z-50">
+        <div class="hidden md:flex gap-8 font-medium text-lg">
+            <a href="#home" class="hover:opacity-70 transition-opacity">Home</a>
+            <a href="#about" class="hover:opacity-70 transition-opacity">About us</a>
+            <a href="#services" class="hover:opacity-70 transition-opacity">Services</a>
+        </div>
+        
+        <a href="#home" class="font-serif font-semibold text-3xl tracking-tight relative group z-10">
+            Warm Words
+        </a>
+
+        <div class="flex items-center gap-6 font-medium text-lg">
+            <a href="#process" class="hidden md:block hover:opacity-70 transition-opacity">Our Process</a>
+            <a href="#contact" class="hidden md:block hover:opacity-70 transition-opacity">Contact</a>
+         
+            <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[90vh] flex flex-col items-center justify-center pt-10 pb-32 overflow-hidden px-6">
+        
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-10 left-10 text-blue-800/80 hidden lg:block">
+            <svg width="120" height="120" viewBox="0 0 100 100">
+                <path d="M10,20 Q30,0 50,20 T90,20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="text-blue-800"/>
+                <path d="M10,40 Q30,20 50,40 T90,40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="text-blue-800"/>
+                <path d="M10,60 Q30,40 50,60 T90,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="text-blue-800"/>
+            </svg>
+        </div>
+
+        <div class="absolute top-20 right-20 hidden lg:block animate-[spin_10s_linear_infinite]">
+            <svg viewBox="0 0 100 100" width="100" height="100">
+                <defs>
+                    <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                </defs>
+                <circle cx="50" cy="50" r="45" fill="#d8b4fe" />
+                <text font-size="12" class="font-sans font-medium uppercase tracking-widest text-purple-900">
+                    <textPath xlink:href="#circle">Warm Words Therapy · Specialist Support ·</textPath>
+                </text>
+            </svg>
+        </div>
+
+        <div class="absolute bottom-20 right-1/4 text-pink-400 hidden lg:block rotate-12">
+            <svg width="80" height="80" viewBox="0 0 100 100">
+                <path d="M50,10 C50,10 60,40 90,50 C90,50 60,60 50,90 C50,90 40,60 10,50 C10,50 40,40 50,10 Z" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <div class="absolute top-1/3 left-1/4 text-lime-300 hidden lg:block -rotate-12">
+            <svg width="100" height="40" viewBox="0 0 100 40">
+                <path d="M0,20 Q25,0 50,20 T100,20" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="absolute top-1/2 right-10 text-orange-500 hidden lg:block z-0">
+             <div class="w-32 h-24 bg-orange-500 blob-mask bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMiIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4=')] bg-repeat"></div>
+        </div>
+
+        <!-- Central Composition -->
+        <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center mt-20">
+            
+            <p class="max-w-xs text-center text-lg lg:absolute lg:top-[-60px] lg:right-20 lg:text-left mb-8 lg:mb-0 z-20 bg-[#fdfbf7]/80 backdrop-blur-sm p-4 rounded-xl">
+                Every child deserves to be heard and understood. We offer warm, evidence-based therapy.
+            </p>
+
+            <h1 class="font-serif text-[4rem] md:text-[7rem] lg:text-[9.5rem] leading-[0.85] tracking-tight text-center relative z-40 flex flex-col items-center justify-center w-full pointer-events-none" style="text-shadow: 0 0 40px #fdfbf7, 0 0 20px #fdfbf7;">
+                <span class="block transform -rotate-2 relative z-40 self-start lg:-ml-4 xl:ml-10 font-semibold italic text-black pointer-events-auto hover:text-outline transition-all duration-300 cursor-default">Find</span>
+                <span class="block transform rotate-2 relative z-40 self-center font-semibold text-black pointer-events-auto">Their</span>
+                <span class="block transform -rotate-1 relative z-40 self-end lg:-mr-4 xl:mr-10 font-semibold italic text-black pointer-events-auto">Voice</span>
+            </h1>
+
+            <!-- Hero Images (Polaroids) -->
+            <div class="lg:absolute top-[-20px] lg:top-0 left-0 lg:left-4 xl:-left-8 lg:w-60 p-3 bg-white shadow-xl transform -rotate-6 rounded-md z-10 mt-12 lg:mt-0 lg:hover:scale-105 transition-transform duration-500">
+                <img src="WhatsApp Image 2026-02-17 at 17.21.42.jpeg" alt="Child in therapy" class="w-full h-auto aspect-[4/5] object-cover rounded-sm transition-all duration-500">
+            </div>
+
+            <div class="lg:absolute bottom-[-40px] right-4 xl:-right-8 lg:w-64 p-4 bg-white shadow-2xl transform rotate-3 rounded-md z-20 hidden lg:block lg:hover:scale-105 transition-transform duration-500">
+                <img src="WhatsApp Image 2026-02-17 at 17.21.42-2.jpeg" alt="Joyful child" class="w-full h-auto aspect-square object-cover rounded-sm transition-all duration-500">
+            </div>
+            
+            <p class="max-w-md text-center text-lg mt-16 lg:absolute lg:bottom-[-80px] lg:left-32 lg:text-left bg-[#fdfbf7]/80 backdrop-blur-sm p-4 rounded-xl z-20">
+                Meeting your child exactly where they are — and helping them flourish naturally.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Services Cards Section -->
+    <section id="services" class="max-w-6xl mx-auto px-6 py-20 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-[#4de99c] rounded-[2.5rem] p-10 flex flex-col justify-between aspect-square relative group overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all"></div>
+                <div class="relative z-10">
+                    <h3 class="font-serif font-semibold text-4xl tracking-tight mb-4 leading-none">Speech<br>Therapy</h3>
+                    <p class="text-lg opacity-90 leading-snug">Articulation, phonology, and clarity of speech for children to help them be understood.</p>
+                </div>
+                <button class="self-end w-14 h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors relative z-10">
+                    <i data-lucide="arrow-up-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#b998f4] rounded-[2.5rem] p-10 flex flex-col justify-between aspect-[4/5] lg:aspect-[3/4] relative lg:mt-24 group overflow-hidden">
+                 <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all"></div>
+                <div class="relative z-10">
+                    <h3 class="font-serif font-semibold text-4xl tracking-tight mb-4 leading-none">Language<br>Delay</h3>
+                    <p class="text-lg opacity-90 leading-snug">Gentle early intervention for children who are late talkers or struggling to express thoughts.</p>
+                </div>
+                <!-- Decorative SVG inside card -->
+                <svg width="100" height="60" viewBox="0 0 100 60" class="absolute bottom-10 left-10 text-white/30 -rotate-12">
+                    <path d="M0,30 Q25,0 50,30 T100,30" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <button class="absolute bottom-10 right-10 w-14 h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors z-10">
+                    <i data-lucide="arrow-up-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#e3fba0] rounded-[2.5rem] p-10 flex flex-col justify-between aspect-square relative lg:-mt-12 group overflow-hidden">
+                 <div class="absolute right-0 top-1/2 w-40 h-40 bg-white/40 rounded-full blur-3xl group-hover:bg-white/60 transition-all"></div>
+                <div class="relative z-10">
+                    <h3 class="font-serif font-semibold text-4xl tracking-tight mb-4 leading-none">Autism &<br>Connection</h3>
+                    <p class="text-lg opacity-90 leading-snug">Neurodiversity-affirming support helping autistic children connect on their own terms.</p>
+                </div>
+                <button class="self-end w-14 h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors relative z-10">
+                    <i data-lucide="arrow-up-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Process / Why Choose Section -->
+    <section id="process" class="max-w-5xl mx-auto px-6 py-20 relative">
+        <div class="bg-[#eefec8] rounded-[3rem] p-10 md:p-20 relative overflow-hidden">
+            
+            <h2 class="font-serif font-semibold text-5xl md:text-6xl tracking-tight text-center mb-16 md:mb-24">Why Choose Warm Words?</h2>
+
+            <div class="flex flex-col gap-10">
+                
+                <!-- Item 1 -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center border-b border-black/10 pb-10 group cursor-pointer">
+                    <div class="max-w-2xl">
+                        <h3 class="font-serif font-semibold text-3xl md:text-4xl tracking-tight mb-3 group-hover:opacity-70 transition-opacity">Evidence-Based Care</h3>
+                        <p class="text-lg text-black/70">Our methods are grounded in the latest clinical research and best practices, ensuring your child receives the most effective support.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0 transform group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                        <i data-lucide="arrow-up-right" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center border-b border-black/10 pb-10 group cursor-pointer">
+                    <div class="max-w-2xl">
+                        <h3 class="font-serif font-semibold text-3xl md:text-4xl tracking-tight mb-3 group-hover:opacity-70 transition-opacity">Family-Centred</h3>
+                        <p class="text-lg text-black/70">We coach parents to support progress naturally during every single day, because real life happens outside the clinic.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0 transform group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                        <i data-lucide="arrow-up-right" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center border-b border-black/10 pb-10 group cursor-pointer">
+                    <div class="max-w-2xl">
+                        <h3 class="font-serif font-semibold text-3xl md:text-4xl tracking-tight mb-3 group-hover:opacity-70 transition-opacity">Flexible Approach</h3>
+                        <p class="text-lg text-black/70">Clinic visits, supportive home sessions, and secure online appointments available to fit around your family's life.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0 transform group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                        <i data-lucide="arrow-up-right" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+                 <!-- Item 4 -->
+                 <div class="flex flex-col md:flex-row justify-between md:items-center pb-4 group cursor-pointer">
+                    <div class="max-w-2xl">
+                        <h3 class="font-serif font-semibold text-3xl md:text-4xl tracking-tight mb-3 group-hover:opacity-70 transition-opacity">Highly Experienced</h3>
+                        <p class="text-lg text-black/70">Fully RCSLT registered and HCPC certified with over a decade of specialist experience in pediatric speech and language.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0 transform group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                        <i data-lucide="arrow-up-right" class="w-8 h-8"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Now / About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 relative overflow-hidden">
+        
+        <!-- Decorative Shapes -->
+        <div class="absolute left-10 top-20 text-[#4de99c] hidden md:block">
+            <svg width="40" height="60" viewBox="0 0 40 60">
+                <path d="M10,60 C10,30 30,30 30,0" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+                <path d="M30,60 C30,30 10,30 10,0" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" class="translate-y-4"/>
+            </svg>
+        </div>
+
+        <div class="absolute left-1/2 top-0 text-pink-300 hidden md:block opacity-60 z-0">
+            <svg width="200" height="100" viewBox="0 0 200 100">
+                <path d="M0,80 Q50,0 100,80 T200,80" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            
+            <!-- Text Content -->
+            <div class="relative z-10 pt-10">
+                <h2 class="font-serif font-semibold text-6xl md:text-7xl tracking-tight mb-6 leading-[0.9]">
+                    Meet Your<br><span class="italic font-medium">Therapist</span>
+                    <span class="inline-block text-[#e3fba0] ml-2 -translate-y-4">+</span>
+                </h2>
+                <p class="text-lg mb-6 max-w-md">
+                    Hello! I'm Sarah, a fully registered Speech and Language Therapist with over a decade of experience in both the NHS and private practice. I hold a BSc (Hons) in Speech and Language Therapy.
+                </p>
+                <p class="text-lg max-w-md">
+                    I know firsthand that a clinical hospital room isn't always where children shine. That's why I designed my approach to be entirely different — relaxed, play-based, and highly collaborative with parents.
+                </p>
+
+                <div class="mt-12 text-[#b998f4]">
+                     <svg width="100" height="100" viewBox="0 0 100 100">
+                        <path d="M50,10 C50,10 60,40 90,50 C90,50 60,60 50,90 C50,90 40,60 10,50 C10,50 40,40 50,10 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Images (Overlapping Polaroids) -->
+            <div class="relative h-[600px] w-full mt-10 md:mt-0">
+                
+                <div class="absolute top-0 right-0 w-[70%] p-4 bg-white shadow-2xl transform rotate-6 rounded-md z-20">
+                    <img src="WhatsApp Image 2026-02-17 at 17.21.42-6.jpeg" alt="Sarah working with child" class="w-full aspect-[4/5] object-cover rounded-sm">
+                </div>
+                
+                <div class="absolute bottom-10 left-0 w-[60%] p-3 bg-white shadow-xl transform -rotate-12 rounded-md z-10">
+                    <img src="WhatsApp Image 2026-02-17 at 17.21.42-5.jpeg" alt="Therapy play" class="w-full aspect-square object-cover rounded-sm">
+                    <div class="absolute bottom-6 right-6 font-serif italic text-lg text-white drop-shadow-md rotate-[-12deg]">PLAY</div>
+                </div>
+
+                <div class="absolute bottom-0 right-10 text-[#e3fba0] text-6xl z-30">+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services / Talk Section -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        
+        <h2 class="font-serif font-semibold text-5xl md:text-6xl tracking-tight text-center mb-16">Support For Every Stage</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card A -->
+            <div class="bg-[#4de99c] rounded-[2rem] p-8 flex flex-col items-center text-center">
+                <h3 class="font-serif font-semibold text-3xl tracking-tight mb-3">Stammering</h3>
+                <p class="text-lg opacity-90 mb-8 max-w-[250px]">Evidence-based therapy to build confidence and fluency for children who stammer.</p>
+                <div class="w-full aspect-square arch-mask overflow-hidden mt-auto border-4 border-white">
+                    <img src="WhatsApp Image 2026-02-17 at 17.21.42.jpeg" alt="Kids laughing" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Card B -->
+            <div class="bg-[#fef08a] rounded-[2rem] p-8 flex flex-col items-center text-center relative overflow-hidden">
+                <h3 class="font-serif font-semibold text-3xl tracking-tight mb-3 relative z-10">Parent Coaching</h3>
+                <p class="text-lg opacity-90 mb-8 max-w-[250px] relative z-10">Empowering families with practical strategies to support communication at home.</p>
+                <div class="w-full aspect-square rounded-full overflow-hidden mt-auto border-4 border-white relative z-10">
+                    <img src="WhatsApp Image 2026-02-17 at 17.21.42-2.jpeg" alt="Parent and child" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Circular Arrow Button intersecting image -->
+                <button class="absolute bottom-10 left-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform z-20 text-yellow-500">
+                     <i data-lucide="arrow-up-right" class="w-8 h-8 text-black"></i>
+                </button>
+            </div>
+
+            <!-- Card C -->
+            <div class="bg-[#fbcfe8] rounded-[2rem] p-8 flex flex-col items-center text-center">
+                <h3 class="font-serif font-semibold text-3xl tracking-tight mb-3">Adult Therapy</h3>
+                <p class="text-lg opacity-90 mb-8 max-w-[250px]">Rehabilitation and therapy following stroke, neurological conditions, or voice issues.</p>
+                <div class="w-full aspect-[4/3] rounded-[2rem] overflow-hidden mt-auto border-4 border-white">
+                    <img src="WhatsApp Image 2026-02-17 at 17.21.42-6.jpeg" alt="Adult conversation" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-20">
+        
+        <div class="bg-[#d8b4fe] rounded-[3rem] p-10 md:p-20 relative text-center overflow-hidden">
+            
+            <!-- Decorative background squiggles -->
+            <div class="absolute right-10 top-10 text-[#e3fba0] w-32 hidden md:block opacity-80">
+                <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10,20 L30,60 L50,20 L70,60 L90,20" />
+                </svg>
+            </div>
+            
+            <div class="absolute left-10 bottom-10 text-pink-400 w-24 hidden md:block">
+                 <svg viewBox="0 0 100 100">
+                    <path d="M50,10 C50,10 60,40 90,50 C90,50 60,60 50,90 C50,90 40,60 10,50 C10,50 40,40 50,10 Z" fill="currentColor"/>
+                </svg>
+            </div>
+
+            <div class="absolute right-20 bottom-20 text-[#e3fba0] text-5xl opacity-80">+</div>
+
+            <h2 class="font-serif font-semibold text-5xl md:text-6xl tracking-tight mb-4 relative z-10 flex flex-col items-center justify-center">
+                <span>Start a conversation</span>
+                <span class="flex items-center gap-4 italic mt-2">
+                    <span class="text-[#e3fba0] text-6xl not-italic">+</span> connection
+                </span>
+            </h2>
+            
+            <p class="text-lg max-w-2xl mx-auto mb-12 relative z-10">
+                Whether you're not sure where to start or ready to book an assessment — reach out. We respond to every enquiry personally.
+            </p>
+
+            <form class="max-w-xl mx-auto flex flex-col gap-6 relative z-10">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-1 border-b-2 border-white pb-2 relative">
+                        <input type="text" placeholder="Name" class="w-full bg-transparent text-lg text-black placeholder:text-black/60 focus:outline-none italic">
+                    </div>
+                    <div class="flex-1 border-b-2 border-white pb-2 relative">
+                        <input type="email" placeholder="Email Address" class="w-full bg-transparent text-lg text-black placeholder:text-black/60 focus:outline-none italic">
+                    </div>
+                </div>
+                
+                <button type="button" class="mt-6 bg-white text-black font-serif font-semibold text-xl py-4 px-10 rounded-full inline-flex items-center justify-center gap-2 self-center hover:bg-black hover:text-white transition-colors">
+                    Get Started <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                </button>
+            </form>
+
+            <div class="mt-20 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center text-base opacity-70 relative z-10">
+                <p>&copy; 2024 Warm Words Therapy.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Cookie Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons({
+            strokeWidth: 1.5
+        });
+    </script>
+</body>
+</html>
